@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
+import java.util.List;
+
 @Entity
 public class User implements Serializable{
     private static final long serialVersionUID = 1L;
@@ -22,6 +24,9 @@ public class User implements Serializable{
     @Column(nullable = false)
     private  String regTime;
     public User(){}
+    private List<String> kk;
+
+    private List<Long> ss;
 
     public User(String userName, String passWord, String emails, String nickName, String regTime) {
         this.userName = userName;
@@ -77,5 +82,21 @@ public class User implements Serializable{
 
     public void setRegTime(String regTime) {
         this.regTime = regTime;
+    }
+
+    public List<String> getKk() {
+        return kk;
+    }
+
+    public void setKk(List<String> kk) {
+        this.kk = kk;
+    }
+
+    public List<Long> getSs() {
+        return ss;
+    }
+
+    public void setSs(List<Long> ss) {
+        this.ss = ss;
     }
 }
